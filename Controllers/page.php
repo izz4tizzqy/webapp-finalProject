@@ -21,7 +21,7 @@ class page extends Controller
 
        
         $users=new users;
-        $users->name = request('name');
+        $users->name = ('{{ Auth::user()->name }}');
         $users->phone = request('phone');
         $users->hospital = request('hospital');
         $users->date = request('date');
@@ -29,6 +29,12 @@ class page extends Controller
         $users->save();
         Return view ('output');
 
+    }
+
+    public function index()
+    {
+        $finall= users::all()->toArray();
+        return view('adminview', compact('finall'));
     }
 
 }

@@ -7,12 +7,11 @@ use Illuminate\Http\Request;
 class UserAuth extends Controller
 {
     //
-    function userLogin(Request $req)
+    function adminLogin()
     {
-        $data= $req->input();
-        $req->session()->put('user', $data['user']);
-        return redirect('check');
+        return redirect('adminview');
     }
+
 
 
     function submitSymptom(Request $req)
@@ -20,5 +19,6 @@ class UserAuth extends Controller
         $data= $req->input();
         return redirect('/input');
     }
+
 
 }
