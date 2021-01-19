@@ -57,7 +57,7 @@
       </div>
         <h1>Success</h1> 
         <p>We received your booking request;<br/> we'll be in touch shortly!</p>
-        <button class="button button2"><a href="/logout" class="btn btn-default">Logout</a>
+        <button class="button button2"><a href="/viewbooking" class="btn btn-default">View Appointment</a>
         </button>
         
       </div>
